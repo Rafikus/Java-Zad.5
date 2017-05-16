@@ -8,8 +8,9 @@ class WektoryRoznejDlugosciException extends Exception {
     int v1Length;
     int v2Length;
 
-    WektoryRoznejDlugosciException(Vector v1, Vector v2)
+    WektoryRoznejDlugosciException(Vector v1, Vector v2, String s)
     {
+        super(s);
         v1Length = v1.getLength();
         v2Length = v2.getLength();
     }

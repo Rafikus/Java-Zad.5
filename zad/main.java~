@@ -7,15 +7,15 @@ package zad;
 public class main {
     public static void main(String[] args)
     {
-        Vector v1 = new Vector(), v2 = new Vector(), wynik;
+        Vector v1 = new Vector(), v2 = new Vector(), wynik = new Vector();
         while(true)
         {
             try {
-                v1.readVector();
-                v2.readVector();
+                v1.write();
+                v2.write();
                 wynik = Vector.addVectors(v1, v2);
                 wynik.print();
-                VectorFile.saveToFile("wynik", wynik);
+                wynik.printToFile("wynik");
                 break;
             } catch (WektoryRoznejDlugosciException e) {
                 System.out.printf("Zły rozmiar wektorów\nWektor 1: %d, Wektor 2: %d", v1.getLength(), v2.getLength());
